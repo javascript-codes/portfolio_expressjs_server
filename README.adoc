@@ -1,0 +1,7 @@
+creer les variables d'env +
+
+creer l entree de script de migration +
+
+creer la base de données +
+jouer les migrations +
+ +

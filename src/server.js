@@ -4,7 +4,8 @@ const logger = require("morgan");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const { notFoundHandler, errorLogger, errorHandler } = require("./middlewares");
+const { notFoundHandler, errorLogger, errorHandler } =
+  require("./middlewares");
 const routes = require("./routes");
 
 const server = express();
