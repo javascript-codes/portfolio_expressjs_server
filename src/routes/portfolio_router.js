@@ -11,8 +11,6 @@ const portfolioRouter = express.Router();
 
 portfolioRouter.get("/", async (request, response) => {
   const portfolios = await getAll();
-  console.log(portfolios);
-
   response.status(OK);
   response.json(portfolios);
 });
