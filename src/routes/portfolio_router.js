@@ -1,11 +1,9 @@
 const express = require("express");
 require("express-async-errors");
 
-const {
-  getAll
-} = require("../controllers/portfolio_controller");
+const {getAll} = require("../controllers/portfolio_controller");
 
-const { OK } = require("../helpers/status_code");
+const {OK} = require("../helpers/status_code");
 
 const portfolioRouter = express.Router();
 
