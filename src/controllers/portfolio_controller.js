@@ -1,25 +1,31 @@
 const {Portfolio} = require("../models");
 
 const PortfolioController = {
-  getAll: async () => {
-    const portfolios = await Portfolio.findAll({
+  getAllPortfolios: async () => {
+    return Portfolio.findAll({
       order: [["updatedAt", "DESC"]],
       attributes: [
         "name",
-        "updatedAt"],
+        "updatedAt"
+      ],
       raw: true
     });
-    return portfolios;
   },
-  get: async id => {
-    const portfolio = await Portfolio.findByPk(id, {
+  getPortfolio: async id => {
+    return Portfolio.findByPk(id, {
       attributes: [
         "name",
-        "updatedAt"],
+        "updatedAt"
+      ],
       raw: true
     });
-
-    return portfolio;
+  },
+  createPortfolio: async data => {
+    try {
+      return Portfolio.create(data);
+    } catch (e) {
+      console.error(e);
+    }
   }
 };
 

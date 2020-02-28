@@ -13,7 +13,6 @@ const promotionsRouter = express.Router();
 
 promotionsRouter.get("/", async (request, response) => {
   const promotions = await recupererLesPromotions();
-
   response.status(OK);
   response.json(promotions);
 });
